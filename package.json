@@ -1,0 +1,64 @@
+{
+  "name": "vscode-vue-element-demo",
+  "displayName": "vscode-vue-element-demo",
+  "description": "vscode-vue-element-demo",
+  "version": "0.0.1",
+  "publisher": "SunRising",
+  "icon": "asset/logo.png",
+  "repository": "https://github.com/SunRisingChang/vscode-vue-element-demo.git",
+  "engines": {
+    "vscode": "^1.51.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./out/extension.js",
+  "scripts": {
+    "serve:vue": "vue-cli-service serve vue/views/page1/main.js",
+    "build:vue": "vue-cli-service build --dest media/page1 vue/views/page1/main.js",
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.hello.vue.element.demo",
+        "title": "Hello Vue Element Demo"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.6",
+    "@types/glob": "^7.1.3",
+    "@types/lodash": "^4.14.165",
+    "@types/mocha": "^8.0.4",
+    "@types/node": "^12.11.7",
+    "@types/prettier": "^2.1.5",
+    "@types/vscode": "^1.51.0",
+    "@typescript-eslint/eslint-plugin": "^4.9.0",
+    "@typescript-eslint/parser": "^4.9.0",
+    "@vue/cli-service": "^3.9.0",
+    "babel-plugin-component": "^1.1.1",
+    "element-ui": "^2.13.0",
+    "eslint": "^7.15.0",
+    "glob": "^7.1.6",
+    "mocha": "^8.1.3",
+    "sass": "^1.32.5",
+    "sass-loader": "^10.1.1",
+    "sortablejs": "^1.13.0",
+    "typescript": "^4.1.2",
+    "vscode-test": "^1.4.1",
+    "vue": "^2.6.10",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "dependencies": {
+    "axios": "^0.21.0",
+    "fs-extra": "^9.0.1"
+  }
+}

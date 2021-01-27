@@ -1,0 +1,24 @@
+/**
+ * @Author: Sun Rising 
+ * @Date: 2019-05-31 09:21:35 
+ * @Last Modified by: Sun Rising
+ * @Last Modified time: 2021-01-22 17:36:44
+ * @Description: Element组件样式定制
+ */
+
+@import "./theme-var.scss";
+@import "~element-ui/packages/theme-chalk/src/index";
+html {
+    background-color: #1e1e1e;
+}
+
+.el-loading-mask {
+    background-color: #1e1e1e;
+}
+
+.el-drawer {
+    outline: none;
+    & * {
+        outline: none;
+    }
+}
